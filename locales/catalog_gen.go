@@ -667,6 +667,16 @@ func (msgs Messages) BusySwitchingTo(branch string) string {
 	return Catalog.Format(msgs.locale, "busySwitchingTo", map[string]any{"branch": branch})
 }
 
+// BusySyncing says "Synchronizing…"
+// in the language the app shows.
+func BusySyncing() string { return In(i18n.Locale()).BusySyncing() }
+
+// BusySyncing says "Synchronizing…"
+// in the language of msgs.
+func (msgs Messages) BusySyncing() string {
+	return Catalog.Format(msgs.locale, "busySyncing", nil)
+}
+
 // BusyUndoingCommit says "Undoing the last commit…"
 // in the language the app shows.
 func BusyUndoingCommit() string { return In(i18n.Locale()).BusyUndoingCommit() }
@@ -4325,6 +4335,26 @@ func (msgs Messages) GitNeedsAuth() string {
 	return Catalog.Format(msgs.locale, "gitNeedsAuth", nil)
 }
 
+// GitSync says "Synchronize Changes"
+// in the language the app shows.
+func GitSync() string { return In(i18n.Locale()).GitSync() }
+
+// GitSync says "Synchronize Changes"
+// in the language of msgs.
+func (msgs Messages) GitSync() string {
+	return Catalog.Format(msgs.locale, "gitSync", nil)
+}
+
+// GitSyncTip says "Pull from and push to {upstream}"
+// in the language the app shows.
+func GitSyncTip(upstream string) string { return In(i18n.Locale()).GitSyncTip(upstream) }
+
+// GitSyncTip says "Pull from and push to {upstream}"
+// in the language of msgs.
+func (msgs Messages) GitSyncTip(upstream string) string {
+	return Catalog.Format(msgs.locale, "gitSyncTip", map[string]any{"upstream": upstream})
+}
+
 // GoToLineLabel says "Go to Line"
 // in the language the app shows.
 func GoToLineLabel() string { return In(i18n.Locale()).GoToLineLabel() }
@@ -4925,6 +4955,26 @@ func MergeApplyAuto() string { return In(i18n.Locale()).MergeApplyAuto() }
 // in the language of msgs.
 func (msgs Messages) MergeApplyAuto() string {
 	return Catalog.Format(msgs.locale, "mergeApplyAuto", nil)
+}
+
+// MergeApplyChange says "Apply This Change"
+// in the language the app shows.
+func MergeApplyChange() string { return In(i18n.Locale()).MergeApplyChange() }
+
+// MergeApplyChange says "Apply This Change"
+// in the language of msgs.
+func (msgs Messages) MergeApplyChange() string {
+	return Catalog.Format(msgs.locale, "mergeApplyChange", nil)
+}
+
+// MergeApplyChangeTip says "Put this change of the side, which no conflict holds, in the result"
+// in the language the app shows.
+func MergeApplyChangeTip() string { return In(i18n.Locale()).MergeApplyChangeTip() }
+
+// MergeApplyChangeTip says "Put this change of the side, which no conflict holds, in the result"
+// in the language of msgs.
+func (msgs Messages) MergeApplyChangeTip() string {
+	return Catalog.Format(msgs.locale, "mergeApplyChangeTip", nil)
 }
 
 // MergeApplyChanges says "Apply Changes"
@@ -10137,6 +10187,16 @@ func SyncWhatSyncs() string { return In(i18n.Locale()).SyncWhatSyncs() }
 // in the language of msgs.
 func (msgs Messages) SyncWhatSyncs() string {
 	return Catalog.Format(msgs.locale, "syncWhatSyncs", nil)
+}
+
+// SyncedWith says "Synchronized with {upstream}"
+// in the language the app shows.
+func SyncedWith(upstream string) string { return In(i18n.Locale()).SyncedWith(upstream) }
+
+// SyncedWith says "Synchronized with {upstream}"
+// in the language of msgs.
+func (msgs Messages) SyncedWith(upstream string) string {
+	return Catalog.Format(msgs.locale, "syncedWith", map[string]any{"upstream": upstream})
 }
 
 // TabClose says "Close"
